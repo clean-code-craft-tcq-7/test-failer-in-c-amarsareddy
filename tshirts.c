@@ -9,9 +9,10 @@ char size(int cms) {
     else if(cms > 38){
        sizename = 'M'; 
     }
-    else{
+    else if(cms < 39){
         sizename = 's';
     }
+    else{}
     return sizename;
 }
 
@@ -19,7 +20,7 @@ char size(int cms) {
 
 int testTshirtSize() {
     printf("\nTshirt size test\n");
-    assert(size(38) == 'S');               // To test S size valid class
+    assert(size(37) == 'S');               // To test S size valid class
     assert(size(38) == 'S');               // To test the max boundary of the Short size
     assert(size(39) == 'M');               // To test M size Minimum boundary check
     assert(size(40) == 'M');               // To test M size valid class
