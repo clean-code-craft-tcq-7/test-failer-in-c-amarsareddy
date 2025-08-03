@@ -9,10 +9,9 @@ char size(int cms) {
     else if(cms > 38){
        sizename = 'M'; 
     }
-    else if(cms < 39){
+    else{
         sizename = 'S';
     }
-    else{}
     return sizename;
 }
 
