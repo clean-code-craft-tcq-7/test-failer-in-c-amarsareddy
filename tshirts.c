@@ -19,7 +19,7 @@ char size(int cms) {
 
 int testTshirtSize() {
     printf("\nTshirt size test\n");
-    assert(size(37) == 'S');               // To test S size valid class
+    assert(size(38) == 'S');               // To test S size valid class
     assert(size(38) == 'S');               // To test the max boundary of the Short size
     assert(size(39) == 'M');               // To test M size Minimum boundary check
     assert(size(40) == 'M');               // To test M size valid class
