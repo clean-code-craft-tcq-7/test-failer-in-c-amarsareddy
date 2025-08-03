@@ -29,18 +29,18 @@ int printColorMap() {
                 printf("%d | %s | %s\n", ((i * 5 + j)+1), majorColor[i], minorColor[j]);
             } 
             Store_Colour_Comb.Colour_Index[k]= (k+1);
-            printf("%d is colour index \n",Store_Colour_Comb.Colour_Index[k]);
+     //       printf("%d is colour index \n",Store_Colour_Comb.Colour_Index[k]);
             
             
             // Copy majorColor[i] to structure manually
-            for ( p = 0; p < 7; p++) {
-                Store_Colour_Comb.MajorColour[k][p] = majorColor[i][p];
-            }
+       //     for ( p = 0; p < 7; p++) {
+      //          Store_Colour_Comb.MajorColour[k][p] = majorColor[i][p];
+      //      }
 
             // Copy minorColor[j] to structure manually
-            for (p = 0; p < 7; p++) {
-                Store_Colour_Comb.MinorColour[k][p] = minorColor[j][p];
-            }
+       //     for (p = 0; p < 7; p++) {
+      //          Store_Colour_Comb.MinorColour[k][p] = minorColor[j][p];
+      //      }
             
         }
     }
@@ -55,17 +55,5 @@ int testPrintColorMap() {
     return 0;
 }
 
-void main()
-{
-    printColorMap();
-    
-    //Print stored structure data for verification
-    printf("\nVerifying stored values:\n");
-    for (int i = 0; i < 25; i++) {
-        printf(" %d | %s | %s\n", Store_Colour_Comb.Colour_Index[i],
-               Store_Colour_Comb.MajorColour[i],
-               Store_Colour_Comb.MinorColour[i]);
-    }
- 
-}
+
 
