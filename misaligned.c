@@ -61,19 +61,12 @@ int testPrintColorMap() {
    result = printColorMap();
     
     for (i = 0; i < 25; i++) {
-        if (strcmp(string_Expected_MinColour[i], Store_Colour_Comb.MinorColour[i]) != 0) {
+        if ((strcmp(string_Expected_MinColour[i], Store_Colour_Comb.MinorColour[i]) != 0) || 
+        (strcmp(string_Expected_MajColour[i], Store_Colour_Comb.MajorColour[i]) != 0)) {
             printf("Mismatch at index %d:\nExpected: %s\nActual  : %s\n", 
                    i + 1, string_Expected_MinColour[i], Store_Colour_Comb.MinorColour[i]);
             Equality_Of_Strings = 0;
         }
-    }
-    
-    for (i = 0; i < 25; i++) {
-    if (strcmp(string_Expected_MajColour[i], Store_Colour_Comb.MajorColour[i]) != 0) {
-        printf("Mismatch at index %d:\nExpected: %s\nActual  : %s\n", 
-               i + 1, string_Expected_MinColour[i], Store_Colour_Comb.MinorColour[i]);
-        Equality_Of_Strings = 0;
-    }
     }
 
     if(Equality_Of_Strings == 1)
@@ -86,4 +79,9 @@ int testPrintColorMap() {
     }
     
     return 0;
+}
+
+void main()
+{
+    testPrintColorMap();
 }
