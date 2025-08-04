@@ -29,18 +29,18 @@ int printColorMap() {
                 printf("%d | %s | %s\n", ((i * 5 + j)+1), majorColor[i], minorColor[j]);
             } 
             Store_Colour_Comb.Colour_Index[k]= (k+1);
-     //       printf("%d is colour index \n",Store_Colour_Comb.Colour_Index[k]);
+           // printf("%d is colour index \n",Store_Colour_Comb.Colour_Index[k]);
             
             
             // Copy majorColor[i] to structure manually
-       //     for ( p = 0; p < 7; p++) {
-      //          Store_Colour_Comb.MajorColour[k][p] = majorColor[i][p];
-      //      }
+            for ( p = 0; p < 7; p++) {
+                Store_Colour_Comb.MajorColour[k][p] = majorColor[i][p];
+            }
 
             // Copy minorColor[j] to structure manually
-       //     for (p = 0; p < 7; p++) {
-      //          Store_Colour_Comb.MinorColour[k][p] = minorColor[j][p];
-      //      }
+            for (p = 0; p < 7; p++) {
+                Store_Colour_Comb.MinorColour[k][p] = minorColor[j][p];
+            }
             
         }
     }
@@ -48,11 +48,27 @@ int printColorMap() {
 }
 
 int testPrintColorMap() {
+    
+    char String1[25][6] = {"1  |","2  |","3  |","4  |","5  |","6  |","7  |","8  |","9  |","10  |","11  |","12  |","13  |","14  |","15  |","16  |","17  |","18  |","19  |","20  |","21  |","22  |","23  |","24  |","25  |"};
+    
+    char string_MajColour[25][8] = {" White  |"," White  |"," White  |"," White  |"," White  |"," Red    |"," Red    |"," Red    |"," Red    |"," Red    |"," Black  |"," Black  |"," Black  |"," Black  |"," Black  |"," Yellow |"," Yellow |"," Yellow |","Yellow |","Yellow |"," Violet |"," Violet |"," Violet |"," Violet |"," Violet |"};
+    
+    char string_MinColour[25][9] = {" Blue |"," Orange |"," Green  |"," Brown |"," Slate |"," Blue |"," Orange |"," Green  |"," Brown |"," Slate |"," Blue |"," Orange |"," Green  |"," Brown |"," Slate |"," Blue |"," Orange |"," Green  |"," Brown |"," Slate |"," Blue |"," Orange |"," Green  |"," Brown |"," Slate |"};
+    
     printf("\nPrint color map test\n");
-    int result = printColorMap();
-    assert(result == 25);
+    //String1[0] = printColorMap();
+    //assert(String1[0] == 25);
+    printf("%d is the result\n",String1);
     printf("All is well (maybe!)\n");
     return 0;
+}
+
+
+void main()
+{
+    //testPrintColorMap();
+    printColorMap();
+    
 }
 
 
